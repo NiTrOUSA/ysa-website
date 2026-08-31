@@ -185,6 +185,16 @@
   .svc li { font-size: 0.92rem; color: var(--ink-2); padding-left: 1.2rem; position: relative; }
   .svc li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 6px; height: 6px; border: 1px solid var(--red-deep); transform: rotate(45deg); }
 
+  /* ============ PARTNERS ============ */
+  .partners-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
+  .partner { background: var(--bg-2); padding: clamp(1.5rem, 3vw, 2.1rem); display: flex; flex-direction: column; gap: 0.7rem; min-height: 230px; transition: background 0.35s var(--ease); }
+  .partner:hover { background: var(--bg-3); }
+  .partner-top { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap; }
+  .partner .role { font-family: var(--f-mono); font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red); }
+  .partner .badge { font-family: var(--f-mono); font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: var(--red); padding: 0.35em 0.6em; border-radius: 2px; }
+  .partner h3 { font-family: var(--f-display); font-size: 1.55rem; color: var(--ink); margin-top: 0.2rem; }
+  .partner p { color: var(--ink-2); font-size: 0.9rem; margin-top: auto; }
+
   /* ============ WORK GALLERY ============ */
   .gallery { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 200px; gap: 12px; }
   .shot { position: relative; overflow: hidden; border-radius: 4px; border: 1px solid var(--line); }
@@ -276,6 +286,7 @@
     .services-grid { grid-template-columns: 1fr; }
     .svc, .svc:nth-child(4), .svc:nth-child(5) { grid-column: 1 / -1; }
     .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 160px; }
+    .partners-grid { grid-template-columns: repeat(2, 1fr); }
     .why-grid { grid-template-columns: 1fr; }
     .steps { grid-template-columns: 1fr 1fr; }
     .coverage { grid-template-columns: 1fr; }
@@ -289,6 +300,7 @@
     .steps { grid-template-columns: 1fr; }
     .foot-grid { grid-template-columns: 1fr; }
     .gallery { grid-template-columns: 1fr; grid-auto-rows: 200px; }
+    .partners-grid { grid-template-columns: 1fr; }
     .shot.wide { grid-column: auto; }
     .shot.tall { grid-row: auto; }
   }
@@ -309,8 +321,8 @@
     </a>
     <nav class="nav-links" aria-label="Primary">
       <a href="#services">Services</a>
+      <a href="#partners">Partners</a>
       <a href="#work">Work</a>
-      <a href="#approach">Approach</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-cta">
@@ -323,8 +335,8 @@
 
 <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
   <a href="#services">Services</a>
+  <a href="#partners">Partners</a>
   <a href="#work">Work</a>
-  <a href="#approach">Approach</a>
   <a href="#contact">Contact</a>
   <a class="btn btn-ghost" href="tel:+17542687033">Call 24/7 · +1 754 268 7033</a>
   <a class="btn btn-primary" href="#contact">Request service</a>
@@ -418,8 +430,41 @@
     </div>
   </section>
 
+  <!-- ===================== PARTNERS ===================== -->
+  <section class="section-pad approach" id="partners">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Partners &amp; authorized dealer</span>
+        <h2>Backed by the makers behind the systems.</h2>
+        <p>We install and service the systems specified on serious yachts — working hand in hand with their manufacturers — and we're an authorized Exide marine battery dealer.</p>
+      </div>
+      <div class="partners-grid">
+        <article class="partner reveal">
+          <div class="partner-top"><span class="role">Stabilization</span></div>
+          <h3>CMC Marine</h3>
+          <p>Electric fin stabilizers — installation, servicing and fault-finding.</p>
+        </article>
+        <article class="partner reveal">
+          <div class="partner-top"><span class="role">Domotics</span></div>
+          <h3>Yachtica</h3>
+          <p>Onboard domotics and automation — integration, monitoring and control.</p>
+        </article>
+        <article class="partner reveal">
+          <div class="partner-top"><span class="role">Electrical switchboards</span></div>
+          <h3>ATEP</h3>
+          <p>Custom marine electrical panels and switchboards.</p>
+        </article>
+        <article class="partner reveal">
+          <div class="partner-top"><span class="role">Marine batteries</span><span class="badge">Authorized dealer</span></div>
+          <h3>Exide</h3>
+          <p>Official Exide marine battery dealer — the batteries fitted on boats built across Europe.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== WORK GALLERY ===================== -->
-  <section class="section-pad approach" id="work">
+  <section class="section-pad" id="work">
     <div class="wrap">
       <div class="section-head reveal">
         <span class="eyebrow">Selected work</span>
@@ -432,13 +477,13 @@
         <figure class="shot reveal"><img src="img/battery-diagnostics.jpg" alt="Battery bank under diagnostic testing" loading="lazy" /><figcaption>Battery diagnostics</figcaption></figure>
         <figure class="shot reveal"><img src="img/helm-bridge.jpg" alt="Yacht helm with multifunction displays" loading="lazy" /><figcaption>Bridge &amp; navigation</figcaption></figure>
         <figure class="shot wide reveal"><img src="img/inverters.jpg" alt="Inverters and chargers installed in the engine room" loading="lazy" /><figcaption>Inverters &amp; charging</figcaption></figure>
-        <figure class="shot wide reveal"><img src="img/yacht-yard.jpg" alt="Motor yacht at the refit yard" loading="lazy" /><figcaption>At the yard</figcaption></figure>
+        <figure class="shot wide reveal"><img src="img/cmc-stabilizer.jpg" alt="CMC Marine fin stabilizer installed in the hull" loading="lazy" /><figcaption>CMC stabilizer install</figcaption></figure>
       </div>
     </div>
   </section>
 
   <!-- ===================== APPROACH ===================== -->
-  <section class="section-pad" id="approach">
+  <section class="section-pad approach" id="approach">
     <div class="wrap">
       <div class="section-head reveal">
         <span class="eyebrow">Why captains keep our number</span>
@@ -454,7 +499,7 @@
   </section>
 
   <!-- ===================== PROCESS ===================== -->
-  <section class="section-pad approach">
+  <section class="section-pad">
     <div class="wrap">
       <div class="section-head reveal">
         <span class="eyebrow">How a call goes</span>
@@ -470,18 +515,18 @@
   </section>
 
   <!-- ===================== COVERAGE ===================== -->
-  <section class="section-pad" id="coverage">
+  <section class="section-pad approach" id="coverage">
     <div class="wrap coverage">
       <div class="reveal">
-        <span class="eyebrow">Coverage &amp; systems</span>
+        <span class="eyebrow">Coverage</span>
         <h2>South Florida home port. Worldwide range.</h2>
-        <p style="color:var(--ink-2); font-size:var(--step-lead); margin-top:1.1rem;">Based in South Florida — the heart of the global refit trade — and travelling to yachts wherever they lie. We work daily with the systems and manufacturers found on serious yachts.</p>
+        <p style="color:var(--ink-2); font-size:var(--step-lead); margin-top:1.1rem;">Based in South Florida — the heart of the global refit trade — and travelling to yachts wherever they lie. Give us the location, the yacht and the urgency, and we plan the visit around your itinerary.</p>
         <div class="partners-row">
-          <span class="chip">CMC Marine</span><span class="chip">ATEP</span><span class="chip">Yachtica</span><span class="chip">+ major OEMs</span>
+          <span class="chip">Fort Lauderdale</span><span class="chip">Miami</span><span class="chip">Palm Beach</span><span class="chip">Worldwide on request</span>
         </div>
       </div>
       <div class="shot-frame reveal">
-        <img src="img/onsite-canal.jpg" alt="Motor yacht under way in a South Florida canal" loading="lazy" />
+        <img src="img/hull-runninggear.jpg" alt="Yacht hauled out showing hull, running gear and propellers" loading="lazy" />
         <span class="coords">FLL 26.12°N 80.14°W · call-outs plotted worldwide</span>
       </div>
     </div>
