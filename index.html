@@ -192,6 +192,8 @@
   .partner-logo { background: #fff; border-radius: 3px; height: 82px; display: flex; align-items: center; justify-content: center; padding: 0 1.3rem; }
   .partner-logo img { max-height: 42px; max-width: 100%; width: auto; object-fit: contain; }
   .partner-top { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.2rem; }
+  .partner .go { font-family: var(--f-mono); font-size: 0.95rem; color: var(--ink-3); transition: color 0.25s var(--ease), transform 0.25s var(--ease); }
+  .partner:hover .go { color: var(--red-bright); transform: translate(2px, -2px); }
   .partner .role { font-family: var(--f-mono); font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red); }
   .partner .badge { font-family: var(--f-mono); font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: var(--red); padding: 0.35em 0.6em; border-radius: 2px; }
   .partner h3 { font-family: var(--f-display); font-size: 1.55rem; color: var(--ink); margin-top: 0.2rem; }
@@ -441,26 +443,26 @@
         <p>We install and service the systems specified on serious yachts — working hand in hand with their manufacturers — and we're an authorized Exide marine battery dealer.</p>
       </div>
       <div class="partners-grid">
-        <article class="partner reveal">
+        <a class="partner reveal" href="https://www.cmcmarine.com" target="_blank" rel="noopener noreferrer" aria-label="CMC Marine — visit website">
           <div class="partner-logo"><img src="img/partners/cmc.png" alt="CMC Marine" loading="lazy" /></div>
-          <div class="partner-top"><span class="role">Stabilization</span></div>
+          <div class="partner-top"><span class="role">Stabilization</span><span class="go" aria-hidden="true">↗</span></div>
           <p>Electric fin stabilizers — installation, servicing and fault-finding.</p>
-        </article>
-        <article class="partner reveal">
+        </a>
+        <a class="partner reveal" href="https://www.yachtica.com" target="_blank" rel="noopener noreferrer" aria-label="Yachtica — visit website">
           <div class="partner-logo"><img src="img/partners/yachtica.png" alt="Yachtica" loading="lazy" /></div>
-          <div class="partner-top"><span class="role">Domotics</span></div>
+          <div class="partner-top"><span class="role">Domotics</span><span class="go" aria-hidden="true">↗</span></div>
           <p>Onboard domotics and automation — integration, monitoring and control.</p>
-        </article>
-        <article class="partner reveal">
+        </a>
+        <a class="partner reveal" href="https://www.atep.it/en/" target="_blank" rel="noopener noreferrer" aria-label="ATEP Italia — visit website">
           <div class="partner-logo"><img src="img/partners/atep.png" alt="ATEP Italia" loading="lazy" /></div>
-          <div class="partner-top"><span class="role">Electrical switchboards</span></div>
-          <p>Custom marine electrical panels and switchboards.</p>
-        </article>
-        <article class="partner reveal">
+          <div class="partner-top"><span class="role">Electric tables &amp; seating</span><span class="go" aria-hidden="true">↗</span></div>
+          <p>Electrically actuated tables, seats and movable furniture on board.</p>
+        </a>
+        <a class="partner reveal" href="https://www.exide.com" target="_blank" rel="noopener noreferrer" aria-label="Exide — visit website">
           <div class="partner-logo"><img src="img/partners/exide.png" alt="Exide Batteries" loading="lazy" /></div>
           <div class="partner-top"><span class="role">Marine batteries</span><span class="badge">Authorized dealer</span></div>
           <p>Official Exide marine battery dealer — the batteries fitted on boats built across Europe.</p>
-        </article>
+        </a>
       </div>
     </div>
   </section>
