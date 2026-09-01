@@ -36,8 +36,8 @@
   .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line-2);} .btn-ghost:hover{border-color:var(--red);color:var(--red-bright);transform:translateY(-2px);}
 
   header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
-  .nav{display:flex;align-items:center;gap:1.5rem;height:92px;}
-  .brand{margin-right:auto;display:inline-flex;align-items:center;} .brand-plate{display:inline-flex;} .brand-plate img{height:66px;width:auto;}
+  .nav{display:flex;align-items:center;gap:1.5rem;height:100px;}
+  .brand{margin-right:auto;display:inline-flex;align-items:center;} .brand-plate{display:inline-flex;} .brand-plate img{height:74px;width:auto;}
   .nav-links{display:flex;gap:1.9rem;} .nav-links a{font-family:var(--f-mono);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);position:relative;padding:.3em 0;} .nav-links a:hover{color:var(--ink);}
   .nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:100%;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease);} .nav-links a:hover::after{transform:scaleX(1);}
   .nav-cta{display:flex;align-items:center;gap:1rem;} .phone-pill{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--f-mono);font-size:.8rem;color:var(--ink);} .phone-pill .dot{width:7px;height:7px;border-radius:50%;background:var(--red-bright);animation:pulse 2.4s infinite;}
@@ -64,7 +64,7 @@
   @media (prefers-reduced-motion:reduce){.ticker .row{animation:none;}}
 
   .section-pad{padding-block:clamp(4rem,8vw,7.5rem);}
-  main section[id]{scroll-margin-top:104px;}
+  main section[id]{scroll-margin-top:112px;}
   .section-head{max-width:44rem;margin-bottom:clamp(2.4rem,5vw,3.6rem);} .section-head h2{margin-top:1rem;} .section-head p{color:var(--ink-2);font-size:1.12rem;margin-top:1.1rem;}
   .num-index{font-family:var(--f-mono);font-size:.72rem;color:var(--ink-3);letter-spacing:.12em;}
 
@@ -116,7 +116,7 @@
     .partners-grid{grid-template-columns:1fr 1fr;} .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px;} .why-grid{grid-template-columns:1fr;} .steps{grid-template-columns:1fr 1fr;} .coverage,.contact-grid{grid-template-columns:1fr;} .foot-grid{grid-template-columns:1fr 1fr;} .foot-brand{grid-column:1/-1;} .mobile-menu.open{display:flex;}
   }
   @media (max-width:520px){.svc{grid-template-columns:1fr;} .svc .code{margin-bottom:-.5rem;} .svc .desc{padding-left:0;} .partners-grid{grid-template-columns:1fr;} form.card{grid-template-columns:1fr;} .steps{grid-template-columns:1fr;} .gallery{grid-template-columns:1fr;} .shot.wide,.shot.tall{grid-column:auto;grid-row:auto;} .foot-grid{grid-template-columns:1fr;}}
-  .mobile-menu{display:none;position:fixed;inset:92px 0 auto 0;z-index:49;flex-direction:column;background:rgba(255,255,255,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);padding:1rem var(--gutter) 2rem;} .mobile-menu a{padding:.9rem 0;border-bottom:1px solid var(--line);font-size:1.05rem;} .mobile-menu .btn{margin-top:1.2rem;}
+  .mobile-menu{display:none;position:fixed;inset:100px 0 auto 0;z-index:49;flex-direction:column;background:rgba(255,255,255,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);padding:1rem var(--gutter) 2rem;} .mobile-menu a{padding:.9rem 0;border-bottom:1px solid var(--line);font-size:1.05rem;} .mobile-menu .btn{margin-top:1.2rem;}
   .vswitch{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:80;display:flex;align-items:center;gap:2px;background:rgba(8,10,14,.92);border:1px solid rgba(255,255,255,.16);border-radius:30px;padding:5px 6px 5px 13px;font-family:var(--f-mono);font-size:.72rem;box-shadow:0 10px 30px -12px rgba(0,0,0,.6);}
   .vswitch>span{color:#8ea1ad;margin-right:5px;letter-spacing:.12em;text-transform:uppercase;} .vswitch a{color:#fff;padding:.38em .8em;border-radius:20px;opacity:.65;transition:.2s;} .vswitch a:hover{opacity:1;} .vswitch a.on{background:var(--red);opacity:1;}
 </style>
@@ -124,7 +124,7 @@
 <body>
 <nav class="vswitch" aria-label="Design variants"><span>Model</span><a href="index.html">V1</a><a href="v2.html">V2</a><a href="v3.html" class="on">V3</a></nav>
 <header class="site"><div class="wrap nav">
-  <a class="brand" href="#top" aria-label="Yacht Services of America — home"><span class="brand-plate"><img src="img/logo-full.png" alt="Yacht Services of America"/></span></a>
+  <a class="brand" href="#top" aria-label="Yacht Services of America — home"><span class="brand-plate"><img src="img/logo-stack-light.png" alt="Yacht Services of America"/></span></a>
   <nav class="nav-links"><a href="#services">Services</a><a href="#partners">Partners</a><a href="#work">Work</a><a href="#contact">Contact</a></nav>
   <div class="nav-cta"><a class="phone-pill" href="tel:+17542687033"><span class="dot"></span>24/7 · +1 754 268 7033</a><a class="btn btn-primary" href="#contact">Request service</a><button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button></div>
 </div></header>
