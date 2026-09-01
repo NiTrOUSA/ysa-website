@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yacht Services of America — Light</title>
+<meta name="description" content="Marine electrical, mechanical, hydraulic and automation service for yachts — on-site across South Florida and worldwide, with 24/7 emergency response." />
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png" />
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" />
+<style>
+  :root{
+    --bg:#F3F6F8; --bg-2:#FFFFFF; --bg-3:#E9EEF1;
+    --ink:#12222F; --ink-2:#4C6272; --ink-3:#84979F;
+    --line:rgba(18,34,47,0.12); --line-2:rgba(194,31,42,0.35);
+    --red:#C21F2A; --red-bright:#D8323C; --red-deep:#9E3135; --navy:#16293A;
+    --maxw:1180px; --gutter:clamp(20px,5vw,64px);
+    --f-display:"Archivo",system-ui,sans-serif; --f-sans:"IBM Plex Sans",system-ui,sans-serif; --f-mono:"IBM Plex Mono",ui-monospace,monospace;
+    --h1:clamp(2.4rem,1.5rem+4vw,4.6rem); --h2:clamp(1.8rem,1.3rem+2.2vw,2.9rem);
+    --ease:cubic-bezier(.22,1,.36,1);
+  }
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-sans);font-size:1rem;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  a{color:inherit;text-decoration:none;} img,svg{display:block;max-width:100%;}
+  ::selection{background:var(--red);color:#fff;}
+  :focus-visible{outline:2px solid var(--red);outline-offset:3px;}
+  .wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter);}
+  .eyebrow{font-family:var(--f-mono);font-weight:500;letter-spacing:.2em;text-transform:uppercase;font-size:.72rem;color:var(--red);display:inline-flex;align-items:center;gap:.7em;}
+  .eyebrow::before{content:"";width:24px;height:2px;background:var(--red);}
+  h1,h2,h3{font-family:var(--f-display);font-weight:700;line-height:1.05;letter-spacing:-.02em;margin:0;text-wrap:balance;}
+  h2{font-size:var(--h2);} p{margin:0;}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;font-family:var(--f-sans);font-weight:600;font-size:.95rem;padding:.9em 1.5em;border-radius:3px;border:1px solid transparent;cursor:pointer;transition:.25s var(--ease);white-space:nowrap;}
+  .btn svg{width:1.05em;height:1.05em;}
+  .btn-primary{background:var(--red);color:#fff;box-shadow:0 12px 26px -14px rgba(194,31,42,.7);}
+  .btn-primary:hover{background:var(--red-bright);transform:translateY(-2px);}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line);}
+  .btn-ghost:hover{border-color:var(--red);color:var(--red);transform:translateY(-2px);}
+
+  header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
+  .nav{display:flex;align-items:center;gap:1.5rem;height:76px;}
+  .brand{margin-right:auto;display:inline-flex;align-items:center;} .brand img{height:32px;width:auto;}
+  .nav-links{display:flex;gap:1.9rem;} .nav-links a{font-size:.92rem;font-weight:500;color:var(--ink-2);position:relative;padding:.3em 0;}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:100%;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease);}
+  .nav-links a:hover{color:var(--ink);} .nav-links a:hover::after{transform:scaleX(1);}
+  .nav-cta{display:flex;align-items:center;gap:1rem;}
+  .phone-pill{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--f-mono);font-size:.82rem;color:var(--ink);}
+  .phone-pill .dot{width:7px;height:7px;border-radius:50%;background:var(--red);animation:pulse 2.4s infinite;}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(194,31,42,.5);}70%{box-shadow:0 0 0 7px rgba(194,31,42,0);}100%{box-shadow:0 0 0 0 rgba(194,31,42,0);}}
+  @media (prefers-reduced-motion:reduce){.phone-pill .dot{animation:none;}}
+  .burger{display:none;background:none;border:1px solid var(--line);border-radius:3px;width:44px;height:40px;cursor:pointer;} .burger span{display:block;width:18px;height:2px;background:var(--ink);margin:4px auto;}
+
+  /* HERO split */
+  .hero{padding-block:clamp(2.5rem,5vw,5rem) clamp(3rem,6vw,5.5rem);}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.5rem);align-items:center;}
+  .hero h1{font-size:var(--h1);font-weight:800;margin-top:1.3rem;}
+  .hero h1 em{font-style:normal;color:var(--red);}
+  .hero .lead{font-size:clamp(1.05rem,.98rem+.4vw,1.22rem);color:var(--ink-2);margin-top:1.4rem;max-width:34rem;}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2rem;}
+  .hero-note{margin-top:1.5rem;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;color:var(--ink-3);text-transform:uppercase;}
+  .hero-photo{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 80px -40px rgba(18,34,47,.5);}
+  .hero-photo img{width:100%;height:100%;object-fit:cover;}
+  .hero-photo .tag{position:absolute;left:1.1rem;bottom:1.1rem;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:rgba(18,34,47,.7);padding:.5em .8em;border-radius:3px;backdrop-filter:blur(4px);}
+
+  .stats{background:var(--navy);color:#fff;}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);}
+  .stat{padding:clamp(1.4rem,3vw,2.1rem) clamp(1rem,2.5vw,1.7rem);border-left:1px solid rgba(255,255,255,.12);}
+  .stat:first-child{border-left:none;}
+  .stat b{display:block;font-family:var(--f-display);font-weight:800;font-size:clamp(1.5rem,1rem+1.7vw,2.1rem);color:#fff;}
+  .stat span{display:block;font-size:.82rem;color:rgba(255,255,255,.7);margin-top:.3rem;}
+
+  .section-pad{padding-block:clamp(4rem,8vw,7rem);}
+  .section-head{max-width:40rem;margin-bottom:clamp(2.2rem,4vw,3.2rem);}
+  .section-head h2{margin-top:.9rem;} .section-head p{color:var(--ink-2);font-size:1.1rem;margin-top:1rem;}
+
+  .services-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1.2rem;}
+  .svc{grid-column:span 2;background:var(--bg-2);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;transition:.3s var(--ease);}
+  .svc:nth-child(4),.svc:nth-child(5){grid-column:span 3;}
+  .svc:hover{transform:translateY(-4px);box-shadow:0 24px 48px -30px rgba(18,34,47,.4);}
+  .svc-photo{aspect-ratio:16/9;overflow:hidden;} .svc-photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease);}
+  .svc:hover .svc-photo img{transform:scale(1.05);}
+  .svc-body{padding:clamp(1.3rem,2.6vw,1.9rem);display:flex;flex-direction:column;gap:.85rem;flex:1;}
+  .svc-top{display:flex;align-items:center;justify-content:space-between;} .svc-code{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.12em;color:var(--red);} .svc-icon{width:26px;height:26px;color:var(--red);}
+  .svc h3{font-size:1.28rem;} .svc ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.5rem;}
+  .svc li{font-size:.92rem;color:var(--ink-2);padding-left:1.2rem;position:relative;}
+  .svc li::before{content:"";position:absolute;left:0;top:.6em;width:6px;height:6px;background:var(--red);transform:rotate(45deg);}
+
+  .partners-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;}
+  .partner{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:1.5rem;display:flex;flex-direction:column;gap:.8rem;min-height:250px;transition:.3s var(--ease);}
+  .partner:hover{transform:translateY(-4px);box-shadow:0 24px 48px -30px rgba(18,34,47,.4);}
+  .partner-logo{height:78px;display:flex;align-items:center;justify-content:flex-start;}
+  .partner-logo img{max-height:40px;max-width:100%;width:auto;object-fit:contain;}
+  .partner-top{display:flex;align-items:center;justify-content:space-between;gap:.5rem;flex-wrap:wrap;}
+  .partner .role{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--red);}
+  .partner .badge{font-family:var(--f-mono);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--red);padding:.35em .6em;border-radius:3px;}
+  .partner .go{font-family:var(--f-mono);color:var(--ink-3);transition:.25s var(--ease);}
+  .partner:hover .go{color:var(--red);transform:translate(2px,-2px);}
+  .partner p{color:var(--ink-2);font-size:.9rem;margin-top:auto;}
+
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:12px;}
+  .shot{position:relative;overflow:hidden;border-radius:8px;border:1px solid var(--line);}
+  .shot img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease);}
+  .shot:hover img{transform:scale(1.06);}
+  .shot figcaption{position:absolute;left:0;right:0;bottom:0;padding:1rem;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:linear-gradient(0deg,rgba(18,34,47,.85),transparent);opacity:0;transition:.35s var(--ease);}
+  .shot:hover figcaption{opacity:1;}
+  .shot.tall{grid-row:span 2;} .shot.wide{grid-column:span 2;}
+
+  .band{background:var(--bg-3);}
+  .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;}
+  .why{display:flex;gap:1.1rem;padding:1.5rem 0;border-top:2px solid var(--line);}
+  .why .n{font-family:var(--f-mono);font-size:.78rem;color:var(--red);padding-top:.3rem;}
+  .why h3{font-size:1.1rem;} .why p{color:var(--ink-2);font-size:.94rem;margin-top:.5rem;}
+
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;}
+  .step{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:1.6rem;}
+  .step .num{font-family:var(--f-display);font-weight:800;font-size:2.2rem;color:var(--red);}
+  .step h3{font-size:1.05rem;margin-top:.8rem;} .step p{color:var(--ink-2);font-size:.9rem;margin-top:.5rem;}
+
+  .coverage{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center;}
+  .coverage .frame{border-radius:8px;overflow:hidden;aspect-ratio:4/3;border:1px solid var(--line);} .coverage .frame img{width:100%;height:100%;object-fit:cover;}
+  .chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.5rem;} .chips .chip{font-family:var(--f-mono);font-size:.76rem;letter-spacing:.06em;padding:.5em .9em;border:1px solid var(--line);border-radius:3px;color:var(--ink-2);text-transform:uppercase;}
+
+  .emergency{background:var(--red);color:#fff;} .emergency .wrap{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;padding-block:clamp(2rem,4vw,2.8rem);}
+  .emergency .label{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;opacity:.85;} .emergency h2{color:#fff;margin-top:.4rem;} .emergency p{margin-top:.4rem;opacity:.9;}
+  .emergency .btn-white{background:#fff;color:var(--red);} .emergency .btn-white:hover{background:#fff;transform:translateY(-2px);}
+
+  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,5vw,4rem);}
+  .contact-list{margin-top:1.8rem;display:flex;flex-direction:column;gap:1.2rem;} .contact-list .row{display:flex;gap:.9rem;} .contact-list .row svg{width:20px;height:20px;color:var(--red);flex:none;margin-top:.15rem;}
+  .contact-list .k{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.12em;color:var(--ink-3);text-transform:uppercase;} .contact-list .v{font-size:1.02rem;margin-top:.1rem;} .contact-list .v a:hover{color:var(--red);}
+  form.card{background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:clamp(1.5rem,3.5vw,2.4rem);display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+  form.card .full{grid-column:1/-1;} .field{display:flex;flex-direction:column;gap:.4rem;}
+  .field label{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);} .field .req{color:var(--red);}
+  .field input,.field select,.field textarea{font-family:var(--f-sans);font-size:.95rem;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:.8em .9em;width:100%;transition:.2s var(--ease);}
+  .field textarea{resize:vertical;min-height:110px;} .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(194,31,42,.14);}
+  .field select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%23C21F2A' stroke-width='1.4' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .9em center;cursor:pointer;}
+  .form-foot{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;} .form-foot .hint{font-size:.8rem;color:var(--ink-3);max-width:22rem;}
+
+  footer.site{background:var(--navy);color:#fff;} .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem;padding-block:clamp(3rem,5vw,4rem);}
+  .foot-brand img{height:64px;width:auto;margin-bottom:1.2rem;} .foot-brand p{color:rgba(255,255,255,.7);font-size:.92rem;max-width:26rem;}
+  .foot-col h4{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;opacity:.6;margin:0 0 1rem;} .foot-col a,.foot-col span{display:block;color:rgba(255,255,255,.8);font-size:.92rem;margin-bottom:.6rem;} .foot-col a:hover{color:#fff;}
+  .foot-bar{border-top:1px solid rgba(255,255,255,.12);padding-block:1.4rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;} .foot-bar span{font-family:var(--f-mono);font-size:.72rem;color:rgba(255,255,255,.5);}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s var(--ease),transform .7s var(--ease);} .reveal.in{opacity:1;transform:none;}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;} .btn:hover{transform:none;}}
+
+  @media (max-width:900px){
+    .nav-links,.phone-pill{display:none;} .burger{display:block;} .nav-cta .btn{display:none;}
+    .hero-grid{grid-template-columns:1fr;} .hero-photo{aspect-ratio:16/10;order:-1;}
+    .stats-grid{grid-template-columns:repeat(2,1fr);} .stat:nth-child(3){border-left:none;}
+    .services-grid,.partners-grid{grid-template-columns:1fr;} .svc,.svc:nth-child(4),.svc:nth-child(5){grid-column:1/-1;}
+    .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px;} .why-grid{grid-template-columns:1fr;} .steps{grid-template-columns:1fr 1fr;}
+    .coverage,.contact-grid{grid-template-columns:1fr;} .foot-grid{grid-template-columns:1fr 1fr;} .foot-brand{grid-column:1/-1;}
+    .mobile-menu.open{display:flex;}
+  }
+  @media (max-width:520px){form.card{grid-template-columns:1fr;} .steps{grid-template-columns:1fr;} .foot-grid{grid-template-columns:1fr;} .gallery{grid-template-columns:1fr;} .shot.wide,.shot.tall{grid-column:auto;grid-row:auto;}}
+  .mobile-menu{display:none;position:fixed;inset:76px 0 auto 0;z-index:49;flex-direction:column;background:rgba(255,255,255,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);padding:1rem var(--gutter) 2rem;} .mobile-menu a{padding:.9rem 0;border-bottom:1px solid var(--line);font-size:1.05rem;} .mobile-menu .btn{margin-top:1.2rem;}
+  .vswitch{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:80;display:flex;align-items:center;gap:2px;background:rgba(8,15,22,.92);border:1px solid rgba(255,255,255,.16);border-radius:30px;padding:5px 6px 5px 13px;font-family:var(--f-mono);font-size:.72rem;box-shadow:0 10px 30px -12px rgba(0,0,0,.5);}
+  .vswitch>span{color:#8ea1ad;margin-right:5px;letter-spacing:.12em;text-transform:uppercase;} .vswitch a{color:#fff;padding:.38em .8em;border-radius:20px;opacity:.65;transition:.2s;} .vswitch a:hover{opacity:1;} .vswitch a.on{background:var(--red);opacity:1;}
+</style>
+</head>
+<body>
+<nav class="vswitch" aria-label="Design variants"><span>Model</span><a href="index.html">V1</a><a href="v2.html" class="on">V2</a><a href="v3.html">V3</a></nav>
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Yacht Services of America — home"><img src="img/logo-header-light.png" alt="Yacht Services of America" /></a>
+    <nav class="nav-links" aria-label="Primary"><a href="#services">Services</a><a href="#partners">Partners</a><a href="#work">Work</a><a href="#contact">Contact</a></nav>
+    <div class="nav-cta">
+      <a class="phone-pill" href="tel:+17542687033"><span class="dot"></span>24/7 · +1 754 268 7033</a>
+      <a class="btn btn-primary" href="#contact">Request service</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-menu" id="mobileMenu"><a href="#services">Services</a><a href="#partners">Partners</a><a href="#work">Work</a><a href="#contact">Contact</a><a class="btn btn-ghost" href="tel:+17542687033">Call 24/7</a><a class="btn btn-primary" href="#contact">Request service</a></nav>
+
+<main id="top">
+  <section class="hero"><div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">South Florida &amp; worldwide</span>
+      <h1>Marine electrical, mechanical &amp; automation — <em>under control.</em></h1>
+      <p class="lead">Fast, on-site technical service for yachts. Fault-finding, refit support and 24/7 emergency response — from a crew that speaks systems, wherever your yacht is lying.</p>
+      <div class="hero-cta"><a class="btn btn-primary" href="#contact">Request service</a><a class="btn btn-ghost" href="tel:+17542687033">Call the 24/7 line</a></div>
+      <p class="hero-note">Electrical · Mechanical &amp; hydraulic · Automation · Refit · On-site anywhere</p>
+    </div>
+    <div class="hero-photo"><img src="img/hero-yacht.jpg" alt="Superyacht under way off South Florida" /><span class="tag">On-site · South Florida &amp; worldwide</span></div>
+  </div></section>
+
+  <div class="stats"><div class="wrap"><div class="stats-grid">
+    <div class="stat reveal"><b>24/7</b><span>Emergency response line</span></div>
+    <div class="stat reveal"><b>Worldwide</b><span>On-site call-outs &amp; projects</span></div>
+    <div class="stat reveal"><b>5 lines</b><span>Every onboard system, one crew</span></div>
+    <div class="stat reveal"><b>~1 day</b><span>Typical reply to a request</span></div>
+  </div></div></div>
+
+  <section class="section-pad" id="services"><div class="wrap">
+    <div class="section-head reveal"><span class="eyebrow">Capabilities</span><h2>One crew for every system on board.</h2><p>From a tripped panel at the dock to a full automation refit, the same team handles diagnosis, repair and testing — and coordinates the rest.</p></div>
+    <div class="services-grid">
+      <article class="svc reveal"><div class="svc-photo"><img src="img/electrical-panels.jpg" alt="Yacht electrical switchboard" loading="lazy"/></div><div class="svc-body"><div class="svc-top"><span class="svc-code">E-01</span></div><h3>Electrical systems</h3><ul><li>Fault finding &amp; troubleshooting</li><li>Panels, breakers, wiring, shore power</li><li>Batteries, chargers, inverters</li><li>Generator support &amp; load testing</li></ul></div></article>
+      <article class="svc reveal"><div class="svc-photo"><img src="img/engine-room.jpg" alt="Yacht engine room" loading="lazy"/></div><div class="svc-body"><div class="svc-top"><span class="svc-code">M-02</span></div><h3>Mechanical &amp; hydraulic</h3><ul><li>Pumps, leaks, hoses, fittings</li><li>Preventative maintenance</li><li>Pressure testing &amp; reliability</li></ul></div></article>
+      <article class="svc reveal"><div class="svc-photo"><img src="img/automation-cabinet.jpg" alt="Automation control cabinet" loading="lazy"/></div><div class="svc-body"><div class="svc-top"><span class="svc-code">A-03</span></div><h3>Automation &amp; domotics</h3><ul><li>System integration &amp; troubleshooting</li><li>Sensors, monitoring, control interfaces</li><li>Calibration, updates, reliability fixes</li></ul></div></article>
+      <article class="svc reveal"><div class="svc-photo"><img src="img/yacht-yard.jpg" alt="Motor yacht at the refit yard" loading="lazy"/></div><div class="svc-body"><div class="svc-top"><span class="svc-code">R-04</span></div><h3>Maintenance &amp; refit support</h3><ul><li>Planned maintenance programs</li><li>Upgrades &amp; refit assistance</li><li>Coordination with yards &amp; suppliers</li></ul></div></article>
+      <article class="svc reveal"><div class="svc-photo"><img src="img/onsite-canal.jpg" alt="Motor yacht in a Fort Lauderdale canal" loading="lazy"/></div><div class="svc-body"><div class="svc-top"><span class="svc-code">OS-05</span></div><h3>Worldwide on-site service</h3><ul><li>We travel for service calls &amp; projects</li><li>Share location, yacht details &amp; urgency</li><li>Scheduled support around your itinerary</li></ul></div></article>
+    </div>
+  </div></section>
+
+  <section class="section-pad band" id="partners"><div class="wrap">
+    <div class="section-head reveal"><span class="eyebrow">Partners &amp; authorized dealer</span><h2>Backed by the makers behind the systems.</h2><p>We install and service the systems specified on serious yachts — and we're an authorized Exide marine battery dealer.</p></div>
+    <div class="partners-grid">
+      <a class="partner reveal" href="https://www.cmcmarine.com" target="_blank" rel="noopener noreferrer"><div class="partner-logo"><img src="img/partners/cmc.png" alt="CMC Marine" loading="lazy"/></div><div class="partner-top"><span class="role">Stabilization</span><span class="go">↗</span></div><p>Electric fin stabilizers — installation, servicing and fault-finding.</p></a>
+      <a class="partner reveal" href="https://www.yachtica.com" target="_blank" rel="noopener noreferrer"><div class="partner-logo"><img src="img/partners/yachtica.png" alt="Yachtica" loading="lazy"/></div><div class="partner-top"><span class="role">Domotics</span><span class="go">↗</span></div><p>Onboard domotics and automation — integration, monitoring and control.</p></a>
+      <a class="partner reveal" href="https://www.atep.it/en/" target="_blank" rel="noopener noreferrer"><div class="partner-logo"><img src="img/partners/atep.png" alt="ATEP Italia" loading="lazy"/></div><div class="partner-top"><span class="role">Electric tables &amp; seating</span><span class="go">↗</span></div><p>Electrically actuated tables, seats and movable furniture on board.</p></a>
+      <a class="partner reveal" href="https://www.exide.com" target="_blank" rel="noopener noreferrer"><div class="partner-logo"><img src="img/partners/exide.png" alt="Exide Batteries" loading="lazy"/></div><div class="partner-top"><span class="role">Marine batteries</span><span class="badge">Authorized dealer</span></div><p>Official Exide marine battery dealer — the batteries fitted on boats built across Europe.</p></a>
+    </div>
+  </div></section>
+
+  <section class="section-pad" id="work"><div class="wrap">
+    <div class="section-head reveal"><span class="eyebrow">Selected work</span><h2>Real boats. Real systems. Our hands on them.</h2></div>
+    <div class="gallery">
+      <figure class="shot tall wide reveal"><img src="img/superyacht.jpg" alt="Superyacht at the yard" loading="lazy"/><figcaption>Refit &amp; project support</figcaption></figure>
+      <figure class="shot tall reveal"><img src="img/power-management.jpg" alt="Power-management panel" loading="lazy"/><figcaption>Power management</figcaption></figure>
+      <figure class="shot reveal"><img src="img/battery-diagnostics.jpg" alt="Battery diagnostics" loading="lazy"/><figcaption>Battery diagnostics</figcaption></figure>
+      <figure class="shot reveal"><img src="img/helm-bridge.jpg" alt="Yacht helm" loading="lazy"/><figcaption>Bridge &amp; navigation</figcaption></figure>
+      <figure class="shot wide reveal"><img src="img/cmc-stabilizer.jpg" alt="CMC stabilizer install" loading="lazy"/><figcaption>CMC stabilizer install</figcaption></figure>
+      <figure class="shot wide reveal"><img src="img/inverters.jpg" alt="Inverters and chargers" loading="lazy"/><figcaption>Inverters &amp; charging</figcaption></figure>
+    </div>
+  </div></section>
+
+  <section class="section-pad band"><div class="wrap">
+    <div class="section-head reveal"><span class="eyebrow">Why captains keep our number</span><h2>Downtime is expensive. We're built to end it fast.</h2></div>
+    <div class="why-grid">
+      <div class="why reveal"><span class="n">01</span><div><h3>Answered around the clock</h3><p>A 24/7 emergency line that reaches people who can act — not a voicemail.</p></div></div>
+      <div class="why reveal"><span class="n">02</span><div><h3>On-site, worldwide</h3><p>Home port in South Florida, but we travel and plan around your itinerary.</p></div></div>
+      <div class="why reveal"><span class="n">03</span><div><h3>Every system, one accountable crew</h3><p>One team across electrical, mechanical, hydraulic and automation — faster diagnosis, no finger-pointing.</p></div></div>
+      <div class="why reveal"><span class="n">04</span><div><h3>We coordinate the rest</h3><p>We manage yards, suppliers and manufacturers so the project lands on schedule.</p></div></div>
+    </div>
+  </div></section>
+
+  <section class="section-pad"><div class="wrap">
+    <div class="section-head reveal"><span class="eyebrow">How a call goes</span><h2>Simple to start. Precise to finish.</h2></div>
+    <div class="steps">
+      <div class="step reveal"><div class="num">1</div><h3>Reach us</h3><p>Call the 24/7 line or send a request with yacht, location and urgency.</p></div>
+      <div class="step reveal"><div class="num">2</div><h3>Diagnose on-site</h3><p>We come to the yacht, find the real fault and scope the fix.</p></div>
+      <div class="step reveal"><div class="num">3</div><h3>Repair &amp; test</h3><p>Work done and load-tested, proven before we leave.</p></div>
+      <div class="step reveal"><div class="num">4</div><h3>Report &amp; prevent</h3><p>A clear account of what happened and what to watch.</p></div>
+    </div>
+  </div></section>
+
+  <section class="section-pad band" id="coverage"><div class="wrap coverage">
+    <div class="reveal"><span class="eyebrow">Coverage</span><h2>South Florida home port. Worldwide range.</h2><p style="color:var(--ink-2);font-size:1.1rem;margin-top:1rem;">Based in South Florida — the heart of the global refit trade — and travelling to yachts wherever they lie.</p><div class="chips"><span class="chip">Fort Lauderdale</span><span class="chip">Miami</span><span class="chip">Palm Beach</span><span class="chip">Worldwide on request</span></div></div>
+    <div class="frame reveal"><img src="img/hull-runninggear.jpg" alt="Yacht hauled out showing hull and running gear" loading="lazy"/></div>
+  </div></section>
+
+  <section class="emergency"><div class="wrap">
+    <div><span class="label">● Emergency</span><h2>Something failing right now?</h2><p>Don't wait for business hours. Call the 24/7 line.</p></div>
+    <a class="btn btn-white" href="tel:+17542687033">Call +1 754 268 7033</a>
+  </div></section>
+
+  <section class="section-pad" id="contact"><div class="wrap contact-grid">
+    <div class="reveal"><span class="eyebrow">Request service</span><h2>Tell us what's going on.</h2><p style="color:var(--ink-2);font-size:1.1rem;margin-top:1rem;">A few details is all we need to get moving. For anything urgent, call the line — it's faster.</p>
+      <div class="contact-list">
+        <div class="row"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5c0 8 7 15 15 15l1-4-5-1.5-1.8 1.8A12 12 0 0 1 8.7 9.8L10.5 8 9 3H5a1 1 0 0 0-1 2Z" stroke="currentColor" stroke-width="1.4"/></svg><div><div class="k">24/7 line</div><div class="v"><a href="tel:+17542687033">+1 754 268 7033</a></div></div></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="m3.5 6 8.5 6 8.5-6" stroke="currentColor" stroke-width="1.4"/></svg><div><div class="k">Email</div><div class="v"><a href="mailto:service@yachtservicesofamerica.com">service@yachtservicesofamerica.com</a></div></div></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="none"><path d="M12 22s7-6.4 7-12a7 7 0 1 0-14 0c0 5.6 7 12 7 12Z" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.4"/></svg><div><div class="k">Based in</div><div class="v">South Florida — on-site worldwide</div></div></div>
+      </div>
+    </div>
+    <form class="card reveal" id="serviceForm" novalidate>
+      <div class="field"><label for="name">Name <span class="req">*</span></label><input id="name" type="text" placeholder="Your name" required/></div>
+      <div class="field"><label for="vessel">Yacht (name / type)</label><input id="vessel" type="text" placeholder="M/Y …, length, make"/></div>
+      <div class="field"><label for="email">Email <span class="req">*</span></label><input id="email" type="email" placeholder="you@example.com" required/></div>
+      <div class="field"><label for="phone">Phone</label><input id="phone" type="tel" placeholder="+1 …"/></div>
+      <div class="field"><label for="location">Location (marina / port)</label><input id="location" type="text" placeholder="Where the yacht is lying"/></div>
+      <div class="field"><label for="urgency">Urgency</label><select id="urgency"><option value="Routine">Routine — plan it in</option><option value="Priority">Priority — this week</option><option value="Emergency">Emergency — now</option></select></div>
+      <div class="field full"><label for="message">What do you need? <span class="req">*</span></label><textarea id="message" placeholder="Describe the system, the symptoms and any deadlines." required></textarea></div>
+      <div class="form-foot"><p class="hint">Opens your email app with the details ready to send.</p><button class="btn btn-primary" type="submit">Send request</button></div>
+    </form>
+  </div></section>
+</main>
+
+<footer class="site"><div class="wrap foot-grid">
+  <div class="foot-brand"><img src="img/logo-dark.png" alt="Yacht Services of America"/><p>Marine electrical, mechanical, hydraulic and automation service for yachts — on-site across South Florida and worldwide, with 24/7 emergency response.</p></div>
+  <div class="foot-col"><h4>Navigate</h4><a href="#services">Services</a><a href="#partners">Partners</a><a href="#work">Work</a><a href="#contact">Request service</a></div>
+  <div class="foot-col"><h4>Contact</h4><a href="tel:+17542687033">+1 754 268 7033</a><a href="mailto:service@yachtservicesofamerica.com">service@yachtservicesofamerica.com</a><span>South Florida — worldwide on-site</span></div>
+</div><div class="wrap foot-bar"><span>© <span id="year">2026</span> Yacht Services of America</span><span>Electrical · Mechanical · Hydraulic · Automation · Refit</span></div></footer>
+
+<script>
+  document.getElementById('year').textContent=new Date().getFullYear();
+  const burger=document.getElementById('burger'),menu=document.getElementById('mobileMenu');
+  burger.addEventListener('click',()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o);});
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+  const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  if(!reduce&&'IntersectionObserver'in window){const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){const s=[...e.target.parentElement.children].filter(c=>c.classList.contains('reveal'));e.target.style.transitionDelay=Math.min(s.indexOf(e.target),5)*70+'ms';e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));}else{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));}
+  document.getElementById('serviceForm').addEventListener('submit',ev=>{ev.preventDefault();const g=id=>(document.getElementById(id).value||'').trim();if(!g('name')||!g('email')||!g('message')){ev.currentTarget.reportValidity();return;}const u=g('urgency');const sub=`[${u}] Service request — ${g('vessel')||g('name')}`;const b=`Name: ${g('name')}\nEmail: ${g('email')}\nPhone: ${g('phone')||'—'}\nYacht: ${g('vessel')||'—'}\nLocation: ${g('location')||'—'}\nUrgency: ${u}\n\n${g('message')}`;location.href=`mailto:service@yachtservicesofamerica.com?subject=${encodeURIComponent(sub)}&body=${encodeURIComponent(b)}`;});
+</script>
+</body>
+</html>

@@ -114,11 +114,9 @@
     border-bottom: 1px solid var(--line);
   }
   .nav { display: flex; align-items: center; gap: 1.5rem; height: 74px; }
-  .brand { display: inline-flex; align-items: center; gap: 0.72rem; margin-right: auto; }
-  .brand .mark { width: 34px; height: 34px; flex: none; object-fit: contain; }
-  .brand .wordmark { display: flex; flex-direction: column; line-height: 1.05; }
-  .brand .wordmark b { font-family: var(--f-sans); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.13em; text-transform: uppercase; }
-  .brand .wordmark span { font-family: var(--f-mono); font-size: 0.6rem; letter-spacing: 0.26em; color: var(--red); text-transform: uppercase; }
+  .brand { display: inline-flex; align-items: center; margin-right: auto; }
+  .brand-plate { background: #fff; border-radius: 4px; padding: 6px 12px; display: inline-flex; align-items: center; }
+  .brand-plate img { height: 27px; width: auto; display: block; }
   .nav-links { display: flex; align-items: center; gap: 1.9rem; }
   .nav-links a { font-size: 0.92rem; font-weight: 500; color: var(--ink-2); position: relative; padding: 0.3em 0; transition: color 0.2s var(--ease); }
   .nav-links a::after { content: ""; position: absolute; left: 0; bottom: -2px; width: 100%; height: 1px; background: var(--red); transform: scaleX(0); transform-origin: left; transition: transform 0.3s var(--ease); }
@@ -312,16 +310,21 @@
   .mobile-menu { display: none; position: fixed; inset: 74px 0 auto 0; z-index: 49; flex-direction: column; background: var(--bg-glass); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); padding: 1rem var(--gutter) 2rem; gap: 0.3rem; }
   .mobile-menu a { padding: 0.9rem 0; border-bottom: 1px solid var(--line); color: var(--ink); font-size: 1.05rem; }
   .mobile-menu .btn { margin-top: 1.2rem; }
+  .vswitch{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:80;display:flex;align-items:center;gap:2px;background:rgba(8,15,22,.92);border:1px solid rgba(255,255,255,.16);border-radius:30px;padding:5px 6px 5px 13px;font-family:var(--f-mono);font-size:.72rem;box-shadow:0 10px 30px -12px rgba(0,0,0,.7);}
+  .vswitch>span{color:#8ea1ad;margin-right:5px;letter-spacing:.12em;text-transform:uppercase;}
+  .vswitch a{color:#fff;padding:.38em .8em;border-radius:20px;opacity:.65;transition:.2s;}
+  .vswitch a:hover{opacity:1;} .vswitch a.on{background:var(--red);opacity:1;}
 </style>
 </head>
 <body>
+
+<nav class="vswitch" aria-label="Design variants"><span>Model</span><a href="index.html" class="on">V1</a><a href="v2.html">V2</a><a href="v3.html">V3</a></nav>
 
 <!-- ===================== HEADER ===================== -->
 <header class="site">
   <div class="wrap nav">
     <a class="brand" href="#top" aria-label="Yacht Services of America — home">
-      <img class="mark" src="img/ysa-mark.png" alt="YSA" width="34" height="34" />
-      <span class="wordmark"><b>Yacht Services</b><span>of America</span></span>
+      <span class="brand-plate"><img src="img/logo-header-light.png" alt="Yacht Services of America" /></span>
     </a>
     <nav class="nav-links" aria-label="Primary">
       <a href="#services">Services</a>
