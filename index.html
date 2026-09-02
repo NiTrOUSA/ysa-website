@@ -222,7 +222,8 @@
       <div class="field"><label for="location">Location (marina / port)</label><input id="location" type="text" placeholder="Where the yacht is lying"/></div>
       <div class="field"><label for="urgency">Urgency</label><select id="urgency"><option value="Routine">Routine — plan it in</option><option value="Priority">Priority — this week</option><option value="Emergency">Emergency — now</option></select></div>
       <div class="field full"><label for="message">What do you need? <span class="req">*</span></label><textarea id="message" placeholder="Describe the system, the symptoms and any deadlines." required></textarea></div>
-      <div class="form-foot"><p class="hint">Opens your email app with the details ready to send.</p><button class="btn btn-primary" type="submit">Send request</button></div>
+      <input type="text" id="_honey" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0"/>
+      <div class="form-foot"><p class="hint" id="formHint">We reply within one business day. Urgent? Call the 24/7 line.</p><button class="btn btn-primary" type="submit" id="formBtn">Send request</button></div>
     </form>
   </div></section>
 </main>
@@ -240,7 +241,38 @@
   menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
   const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
   if(!reduce&&'IntersectionObserver'in window){const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){const s=[...e.target.parentElement.children].filter(c=>c.classList.contains('reveal'));e.target.style.transitionDelay=Math.min(s.indexOf(e.target),5)*70+'ms';e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));}else{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));}
-  document.getElementById('serviceForm').addEventListener('submit',ev=>{ev.preventDefault();const g=id=>(document.getElementById(id).value||'').trim();if(!g('name')||!g('email')||!g('message')){ev.currentTarget.reportValidity();return;}const u=g('urgency');const sub=`[${u}] Service request — ${g('vessel')||g('name')}`;const b=`Name: ${g('name')}\nEmail: ${g('email')}\nPhone: ${g('phone')||'—'}\nYacht: ${g('vessel')||'—'}\nLocation: ${g('location')||'—'}\nUrgency: ${u}\n\n${g('message')}`;location.href=`mailto:service@yachtservicesofamerica.com?subject=${encodeURIComponent(sub)}&body=${encodeURIComponent(b)}`;});
+  (function(){
+    const form=document.getElementById('serviceForm');
+    const g=id=>(document.getElementById(id).value||'').trim();
+    form.addEventListener('submit',async ev=>{
+      ev.preventDefault();
+      if(g('_honey'))return; // spam bot filled the honeypot
+      if(!g('name')||!g('email')||!g('message')){form.reportValidity();return;}
+      const btn=document.getElementById('formBtn');
+      const hint=document.getElementById('formHint');
+      const orig=btn.textContent; btn.disabled=true; btn.textContent='Sending…'; hint.style.color='';
+      const u=g('urgency');
+      const payload={
+        _subject:`[${u}] Service request — ${g('vessel')||g('name')}`,
+        _template:'table', _captcha:'false',
+        Name:g('name'), Email:g('email'), Phone:g('phone')||'—',
+        Yacht:g('vessel')||'—', Location:g('location')||'—', Urgency:u, Message:g('message')
+      };
+      try{
+        const r=await fetch('https://formsubmit.co/ajax/service@yachtservicesofamerica.com',{
+          method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
+          body:JSON.stringify(payload)});
+        const d=await r.json().catch(()=>({}));
+        if(r.ok && (d.success===true||d.success==='true'||String(d.message||'').toLowerCase().includes('sent'))){
+          form.innerHTML='<div style="text-align:center;padding:1.5rem 0"><div style="font-family:var(--f-display);font-weight:400;text-transform:uppercase;font-size:1.6rem;color:var(--ink)">Request sent ✓</div><p style="color:var(--ink-2);margin-top:.8rem">Thanks — we’ll get back to you within one business day.<br/>Urgent? Call the 24/7 line: <a href="tel:+17542687033" style="color:var(--red);font-weight:600">+1 754 268 7033</a>.</p></div>';
+        } else { throw new Error(d.message||'send failed'); }
+      }catch(e){
+        btn.disabled=false; btn.textContent=orig;
+        hint.innerHTML='Couldn’t send right now — please email <a href="mailto:service@yachtservicesofamerica.com" style="color:var(--red)">service@yachtservicesofamerica.com</a> or call +1 754 268 7033.';
+        hint.style.color='var(--red)';
+      }
+    });
+  })();
 </script>
 </body>
 </html>
