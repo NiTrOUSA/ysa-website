@@ -88,6 +88,13 @@
   .shot.tall{grid-row:span 2;} .shot.wide{grid-column:span 2;}
 
   .band{background:var(--bg-2);border-block:1px solid var(--line);}
+  .section-navy{background:var(--navy);color:#fff;}
+  .section-navy .eyebrow{color:var(--red-bright);} .section-navy .eyebrow::before{background:var(--red-bright);}
+  .section-navy .section-head p{color:rgba(255,255,255,.72);}
+  .section-navy .services{border-top-color:rgba(255,255,255,.16);}
+  .section-navy .svc{border-bottom-color:rgba(255,255,255,.16);}
+  .section-navy .svc:hover{background:rgba(255,255,255,.05);}
+  .section-navy .svc .desc{color:rgba(255,255,255,.72);}
   .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;}
   .why{display:flex;gap:1.2rem;padding:1.8rem;border:1px solid var(--line);margin:-0.5px;} .why .n{font-family:var(--f-display);font-size:1.8rem;color:var(--red);line-height:1;} .why h3{font-size:1.12rem;font-weight:600;} .why p{color:var(--ink-2);font-size:.94rem;margin-top:.5rem;}
 
@@ -140,7 +147,7 @@
 
   <div class="ticker"><div class="row"><span>Electrical · Mechanical · Hydraulic · Automation · Refit · 24/7 Emergency · Worldwide On-Site · </span><span>Electrical · Mechanical · Hydraulic · Automation · Refit · 24/7 Emergency · Worldwide On-Site · </span></div></div>
 
-  <section class="section-pad" id="services"><div class="wrap">
+  <section class="section-pad section-navy" id="services"><div class="wrap">
     <div class="section-head reveal"><span class="eyebrow">Capabilities</span><h2 class="display">One crew for every<br/>system on board</h2><p>From a tripped panel at the dock to a full automation refit — diagnosis, repair and testing under one accountable team.</p></div>
     <div class="services">
       <div class="svc reveal"><h3>Electrical systems</h3><div class="desc">Fault finding, panels &amp; shore power, batteries, chargers, inverters, generator support &amp; load testing.</div></div>
