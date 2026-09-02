@@ -69,7 +69,7 @@
   .num-index{font-family:var(--f-mono);font-size:.72rem;color:var(--ink-3);letter-spacing:.12em;}
 
   .services{display:flex;flex-direction:column;border-top:1px solid var(--line);}
-  .svc{display:grid;grid-template-columns:80px 1.1fr 1.4fr;gap:2rem;align-items:center;padding:clamp(1.4rem,3vw,2.4rem) 0;border-bottom:1px solid var(--line);transition:.3s var(--ease);}
+  .svc{display:grid;grid-template-columns:1fr 1.3fr;gap:2rem;align-items:center;padding:clamp(1.4rem,3vw,2.4rem) 0;border-bottom:1px solid var(--line);transition:.3s var(--ease);}
   .svc:hover{background:var(--bg-2);}
   .svc .code{font-family:var(--f-mono);font-size:.8rem;color:var(--red);}
   .svc h3{font-family:var(--f-display);font-weight:400;text-transform:uppercase;font-size:clamp(1.5rem,1rem+1.8vw,2.4rem);line-height:1;letter-spacing:.01em;}
@@ -115,7 +115,7 @@
     .svc{grid-template-columns:60px 1fr;} .svc .desc{grid-column:1/-1;padding-left:calc(60px + 2rem);}
     .partners-grid{grid-template-columns:1fr 1fr;} .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px;} .why-grid{grid-template-columns:1fr;} .steps{grid-template-columns:1fr 1fr;} .coverage,.contact-grid{grid-template-columns:1fr;} .foot-grid{grid-template-columns:1fr 1fr;} .foot-brand{grid-column:1/-1;} .mobile-menu.open{display:flex;}
   }
-  @media (max-width:520px){.svc{grid-template-columns:1fr;} .svc .code{margin-bottom:-.5rem;} .svc .desc{padding-left:0;} .partners-grid{grid-template-columns:1fr;} form.card{grid-template-columns:1fr;} .steps{grid-template-columns:1fr;} .gallery{grid-template-columns:1fr;} .shot.wide,.shot.tall{grid-column:auto;grid-row:auto;} .foot-grid{grid-template-columns:1fr;}}
+  @media (max-width:520px){.svc{grid-template-columns:1fr;} .svc .desc{padding-left:0;} .partners-grid{grid-template-columns:1fr;} form.card{grid-template-columns:1fr;} .steps{grid-template-columns:1fr;} .gallery{grid-template-columns:1fr;} .shot.wide,.shot.tall{grid-column:auto;grid-row:auto;} .foot-grid{grid-template-columns:1fr;}}
   .mobile-menu{display:none;position:fixed;inset:100px 0 auto 0;z-index:49;flex-direction:column;background:rgba(255,255,255,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);padding:1rem var(--gutter) 2rem;} .mobile-menu a{padding:.9rem 0;border-bottom:1px solid var(--line);font-size:1.05rem;} .mobile-menu .btn{margin-top:1.2rem;}
   .vswitch{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:80;display:flex;align-items:center;gap:2px;background:rgba(8,10,14,.92);border:1px solid rgba(255,255,255,.16);border-radius:30px;padding:5px 6px 5px 13px;font-family:var(--f-mono);font-size:.72rem;box-shadow:0 10px 30px -12px rgba(0,0,0,.6);}
   .vswitch>span{color:#8ea1ad;margin-right:5px;letter-spacing:.12em;text-transform:uppercase;} .vswitch a{color:#fff;padding:.38em .8em;border-radius:20px;opacity:.65;transition:.2s;} .vswitch a:hover{opacity:1;} .vswitch a.on{background:var(--red);opacity:1;}
@@ -143,11 +143,11 @@
   <section class="section-pad" id="services"><div class="wrap">
     <div class="section-head reveal"><span class="eyebrow">Capabilities</span><h2 class="display">One crew for every<br/>system on board</h2><p>From a tripped panel at the dock to a full automation refit — diagnosis, repair and testing under one accountable team.</p></div>
     <div class="services">
-      <div class="svc reveal"><span class="code">E-01</span><h3>Electrical systems</h3><div class="desc">Fault finding, panels &amp; shore power, batteries, chargers, inverters, generator support &amp; load testing.</div></div>
-      <div class="svc reveal"><span class="code">M-02</span><h3>Mechanical &amp; hydraulic</h3><div class="desc">Pumps, leaks, hoses and fittings, preventative maintenance, pressure testing &amp; reliability improvements.</div></div>
-      <div class="svc reveal"><span class="code">A-03</span><h3>Automation &amp; domotics</h3><div class="desc">System integration &amp; troubleshooting, sensors and control interfaces, calibration and reliability fixes.</div></div>
-      <div class="svc reveal"><span class="code">R-04</span><h3>Maintenance &amp; refit</h3><div class="desc">Planned maintenance, upgrades and refit assistance, coordination with yards and suppliers.</div></div>
-      <div class="svc reveal"><span class="code">OS-05</span><h3>Worldwide on-site</h3><div class="desc">We travel for service calls and projects — share location, yacht and urgency and we plan around your itinerary.</div></div>
+      <div class="svc reveal"><h3>Electrical systems</h3><div class="desc">Fault finding, panels &amp; shore power, batteries, chargers, inverters, generator support &amp; load testing.</div></div>
+      <div class="svc reveal"><h3>Mechanical &amp; hydraulic</h3><div class="desc">Pumps, leaks, hoses and fittings, preventative maintenance, pressure testing &amp; reliability improvements.</div></div>
+      <div class="svc reveal"><h3>Automation &amp; domotics</h3><div class="desc">System integration &amp; troubleshooting, sensors and control interfaces, calibration and reliability fixes.</div></div>
+      <div class="svc reveal"><h3>Maintenance &amp; refit</h3><div class="desc">Planned maintenance, upgrades and refit assistance, coordination with yards and suppliers.</div></div>
+      <div class="svc reveal"><h3>Worldwide on-site</h3><div class="desc">We travel for service calls and projects — share location, yacht and urgency and we plan around your itinerary.</div></div>
     </div>
   </div></section>
 
