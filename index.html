@@ -117,7 +117,17 @@
   .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s var(--ease),transform .7s var(--ease);} .reveal.in{opacity:1;transform:none;}
   @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;} .btn:hover{transform:none;}}
 
+  .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4rem);align-items:center;}
+  .about-photo{border-radius:6px;overflow:hidden;box-shadow:0 24px 55px -28px rgba(18,34,47,.5);}
+  .about-photo img{width:100%;height:auto;display:block;}
+  .about-text .lead{color:var(--ink-2);font-size:1.15rem;margin-top:1.1rem;}
+  .about-text p{color:var(--ink-2);} .about-text p+p{margin-top:1rem;}
+  .journey{list-style:none;margin:2rem 0 0;padding:0;border-top:1px solid var(--line);}
+  .journey li{display:flex;gap:1.1rem;align-items:baseline;padding:.8rem 0;border-bottom:1px solid var(--line);}
+  .journey .n{font-family:var(--f-mono);font-size:.72rem;color:var(--red);letter-spacing:.1em;flex:none;}
+  .journey .t{font-weight:600;color:var(--ink);}
   @media (max-width:900px){
+    .about-grid{grid-template-columns:1fr;} .about-photo{order:-1;}
     .nav-links,.phone-pill{display:none;} .burger{display:block;} .nav-cta .btn{display:none;}
     .svc{grid-template-columns:60px 1fr;} .svc .desc{grid-column:1/-1;padding-left:calc(60px + 2rem);}
     .partners-grid{grid-template-columns:1fr 1fr;} .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px;} .why-grid{grid-template-columns:1fr;} .steps{grid-template-columns:1fr 1fr;} .coverage,.contact-grid{grid-template-columns:1fr;} .foot-grid{grid-template-columns:1fr 1fr;} .foot-brand{grid-column:1/-1;} .mobile-menu.open{display:flex;}
@@ -129,10 +139,10 @@
 <body>
 <header class="site"><div class="wrap nav">
   <a class="brand" href="#top" aria-label="Yacht Services of America — home"><span class="brand-plate"><img src="img/logo-full.png" alt="Yacht Services of America"/></span></a>
-  <nav class="nav-links"><a href="#services">Services</a><a href="#partners">Partners</a><a href="#work">Work</a><a href="#contact">Contact</a></nav>
+  <nav class="nav-links"><a href="#services">Services</a><a href="#partners">Partners</a><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
   <div class="nav-cta"><a class="phone-pill" href="tel:+17542687033"><span class="dot"></span>24/7 · +1 754 268 7033</a><a class="btn btn-primary" href="#contact">Request service</a><button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button></div>
 </div></header>
-<nav class="mobile-menu" id="mobileMenu"><a href="#services">Services</a><a href="#partners">Partners</a><a href="#work">Work</a><a href="#contact">Contact</a><a class="btn btn-ghost" href="tel:+17542687033">Call 24/7</a><a class="btn btn-primary" href="#contact">Request service</a></nav>
+<nav class="mobile-menu" id="mobileMenu"><a href="#services">Services</a><a href="#partners">Partners</a><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a><a class="btn btn-ghost" href="tel:+17542687033">Call 24/7</a><a class="btn btn-primary" href="#contact">Request service</a></nav>
 
 <main id="top">
   <section class="hero"><div class="wrap hero-inner">
@@ -175,7 +185,25 @@
       <figure class="shot wide reveal"><img src="img/cmc-stabilizer.jpg" alt="CMC stabilizer install" loading="lazy"/><figcaption>CMC stabilizer install</figcaption></figure>
       <figure class="shot wide reveal"><img src="img/inverters.jpg" alt="Inverters and chargers" loading="lazy"/><figcaption>Inverters &amp; charging</figcaption></figure>
       <figure class="shot wide reveal"><img src="img/ysa-panel.jpg" alt="YSA-branded custom electrical switchboard" loading="lazy"/><figcaption>Custom electrical switchboard</figcaption></figure>
-      <figure class="shot wide reveal"><img src="img/ysa-crew.jpg" alt="YSA crew on-site" loading="lazy"/><figcaption>Our crew on-site</figcaption></figure>
+    </div>
+  </div></section>
+
+  <section class="section-pad" id="about"><div class="wrap">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <span class="eyebrow">About</span>
+        <h2 class="display" style="margin-top:1rem;">Twenty years,<br/>from the first wire up.</h2>
+        <p class="lead">Yacht Services of America grew out of more than two decades in marine electrical engineering — inside the yards behind Benetti and Azimut new-builds.</p>
+        <p>The path ran through every stage of a yacht's electrical life: designing onboard systems at the drawing board, wiring and building switchboards by hand, then leading the crews on board that bring those systems online — and, later, into stabilization alongside CMC Marine.</p>
+        <p>Having done every step — design, cabling, switchboards, sea trials, stabilizers — is exactly why one accountable crew can find and fix what others walk away from.</p>
+        <ol class="journey">
+          <li><span class="n">01</span><span class="t">Onboard electrical system design</span></li>
+          <li><span class="n">02</span><span class="t">Wiring &amp; switchboard building</span></li>
+          <li><span class="n">03</span><span class="t">On-board team leadership</span></li>
+          <li><span class="n">04</span><span class="t">Stabilizers — with CMC Marine</span></li>
+        </ol>
+      </div>
+      <div class="about-photo reveal"><img src="img/ysa-crew.jpg" alt="YSA technician on-site in branded uniform" loading="lazy"/></div>
     </div>
   </div></section>
 
